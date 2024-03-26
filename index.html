@@ -107,7 +107,7 @@
 <div class="footer">Made by Jay Kushwaha, Jayesh Joshi, Hitesh Mehta, Kartik Rathore</div>
 
 <script>
-    // Your existing JavaScript code here
+    
     const ML = {
           LinearRegression: class {
               constructor(X, y) {
@@ -187,18 +187,19 @@
             data: chartData,
             options: {
                 scales: {
-                    yAxes: [{
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Price (₹)'
-                        }
-                    }],
-                    xAxes: [{
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Days'
-                        }
-                    }]
+                    y: {
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    text: 'Price in INR' 
+                }
+            },
+            x: {
+                title: {
+                    display: true,
+                    text: 'DAYS' 
+                }
+            }
                 }
             }
         });
